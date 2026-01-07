@@ -11,7 +11,7 @@
       height: 200vh; /* Make the body taller than the viewport to enable scrolling */
 
       /* Fixed background image that doesn't scroll */
-      background-image: url('./foreground-image3.png'); /* Specify the path to your PNG */
+      background-image: url('background_main.png'); /* Specify the path to your PNG */
       background-size: cover; /* Ensure the image covers the entire body */
       background-position: center; /* Center the image */
       background-attachment: fixed; /* Make the background fixed (not scrolling) */
@@ -22,17 +22,7 @@
       text-decoration: none;    /* Remove the underline */
     }
     /* Fixed position text (tesselate) */
-    p2 {
-      font-size: 3.25vh; /* Font size */
-      color: #dddddd; /* Text color */
-      -webkit-text-stroke: 0.06vh #444444; /* Black border around the text */
-      text-align: center;
-      position: fixed; /* Fixed position for the text */
-      top: 30%; /* Vertically center the text */
-      left: 50%; /* Horizontally center the text */
-      transform: translate(-50%, -50%); /* Offset the element to truly center it */
-      z-index: 100; /* Make sure the text stays above the rest of the content */
-    }
+
 
     /* Scrollable content */
     p {
@@ -44,6 +34,18 @@
       top: 55%;
       left: 50%; /* Horizontally center the text */
       transform: translate(-50%, -50%);
+    }
+
+    p2 {
+      font-size: 3.25vh; /* Font size */
+      color: #dddddd; /* Text color */
+      -webkit-text-stroke: 0.06vh #444444; /* Black border around the text */
+      text-align: center;
+      position: fixed; /* Fixed position for the text */
+      top: 30%; /* Vertically center the text */
+      left: 50%; /* Horizontally center the text */
+      transform: translate(-50%, -50%); /* Offset the element to truly center it */
+      z-index: 100; /* Make sure the text stays above the rest of the content */
     }
 
     p3 {
@@ -59,22 +61,6 @@
       left: 75%;          /* Position the image at the left of the viewport */
       z-index: 99;    /* Ensure the image stays above all other elements */
       width: 15vw;   /* Ensure the image covers the whole area without stretching */
-    }
-
-    /* LEFT FIXED SIDEBAR */
-    .left-sidebar {
-      position: fixed;
-      top: 18%;
-      left: 2%;
-      text-align: center;
-
-      width: 25vw;     /* Left 25% of screen */
-      height: 100vh;   /* Full height of screen */
-
-      color: white;
-
-      overflow-y: auto; /* If text is long, scroll inside the sidebar */
-      z-index: 150; /* must be above the background but below foreground if needed */
     }
 
 

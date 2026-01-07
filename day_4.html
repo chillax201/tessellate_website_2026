@@ -11,7 +11,7 @@
       height: 200vh; /* Make the body taller than the viewport to enable scrolling */
 
       /* Fixed background image that doesn't scroll */
-      background-image: url('./foreground-image3.png'); /* Specify the path to your PNG */
+      background-image: url('background_main.png'); /* Specify the path to your PNG */
       background-size: cover; /* Ensure the image covers the entire body */
       background-position: center; /* Center the image */
       background-attachment: fixed; /* Make the background fixed (not scrolling) */
@@ -22,6 +22,17 @@
       text-decoration: none;    /* Remove the underline */
     }
     /* Fixed position text (tesselate) */
+    p {
+      position: fixed;
+      z-index: 1; /* Ensure that content is behind the fixed text */
+      font-size: 1.8vh;
+      text-align: center;
+      width: 40vh;
+      top: 55%;
+      left: 50%; /* Horizontally center the text */
+      transform: translate(-50%, -50%);
+    }
+
     p2 {
       font-size: 3.25vh; /* Font size */
       color: #dddddd; /* Text color */
@@ -32,18 +43,6 @@
       left: 50%; /* Horizontally center the text */
       transform: translate(-50%, -50%); /* Offset the element to truly center it */
       z-index: 100; /* Make sure the text stays above the rest of the content */
-    }
-
-    /* Scrollable content */
-    p {
-      position: fixed;
-      z-index: 1; /* Ensure that content is behind the fixed text */
-      font-size: 1.8vh;
-      text-align: center;
-      width: 40vh;
-      top: 55%;
-      left: 50%; /* Horizontally center the text */
-      transform: translate(-50%, -50%);
     }
 
     p3 {
@@ -61,21 +60,6 @@
       width: 15vw;   /* Ensure the image covers the whole area without stretching */
     }
 
-    /* LEFT FIXED SIDEBAR */
-    .left-sidebar {
-      position: fixed;
-      top: 18%;
-      left: 2%;
-      text-align: center;
-
-      width: 25vw;     /* Left 25% of screen */
-      height: 100vh;   /* Full height of screen */
-
-      color: white;
-
-      overflow-y: auto; /* If text is long, scroll inside the sidebar */
-      z-index: 150; /* must be above the background but below foreground if needed */
-    }
 
 
     /* Scrollable content */

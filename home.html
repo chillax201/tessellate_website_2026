@@ -11,7 +11,7 @@
       height: 200vh; /* Make the body taller than the viewport to enable scrolling */
 
       /* Fixed background image that doesn't scroll */
-      background-image: url('background2.png'); /* Specify the path to your PNG */
+      background-image: url('background_main.png'); /* Specify the path to your PNG */
       background-size: cover; /* Ensure the image covers the entire body */
       background-position: center; /* Center the image */
       background-attachment: fixed; /* Make the background fixed (not scrolling) */
@@ -24,17 +24,6 @@
     }
 
     /* Fixed position text (tesselate) */
-    p2 {
-      font-size: 4vh; /* Font size */
-      color: #dddddd; /* Text color */
-      -webkit-text-stroke: 0.12vh #444444; /* Black border around the text */
-      text-align: center;
-      position: fixed; /* Fixed position for the text */
-      top: 50%; /* Vertically center the text */
-      left: 50%; /* Horizontally center the text */
-      transform: translate(-50%, -50%); /* Offset the element to truly center it */
-      z-index: 100; /* Make sure the text stays above the rest of the content */
-    }
 
     /* Scrollable content */
     p {
@@ -53,7 +42,21 @@
       color: white;
       z-index: 150; /* must be above the background but below foreground if needed */
     }
-    p5 {
+
+    p2 {
+      font-size: 4vh; /* Font size */
+      color: #dddddd; /* Text color */
+      -webkit-text-stroke: 0.12vh #444444; /* Black border around the text */
+      text-align: center;
+      position: fixed; /* Fixed position for the text */
+      top: 50%; /* Vertically center the text */
+      left: 50%; /* Horizontally center the text */
+      transform: translate(-50%, -50%); /* Offset the element to truly center it */
+      z-index: 100; /* Make sure the text stays above the rest of the content */
+    }
+
+
+    p3 {
       color: #dddddd; /* Text color */
       position: fixed;
       z-index: 200; /* Ensure that content is behind the fixed text */
@@ -70,13 +73,7 @@
       z-index: 150; /* must be above the background but below foreground if needed */
     }
 
-    p3 {
-      position: relative;
-      z-index: 1; /* Ensure that content is behind the fixed text */
-      padding-top: 7.7vh; /* Adds some space to avoid overlapping with fixed text */
-      font-size: 1.4vh;
-      text-align: center;
-    }
+
      .foreground-image {
       position: fixed; /* Fix the image in place relative to the viewport */
       top: 0;           /* Position the image at the top of the viewport */
@@ -119,8 +116,6 @@
   <link rel="icon" href="logo.ico" type="image/x-icon">
 </head>
 <body>
-  <!-- Fixed text that stays in place -->
-  <img class="foreground-image" src="./foreground-image2.png" alt="Foreground Image">
   <p2>TESSELLATE</p2>
 
   <!-- Scrollable content -->
@@ -131,10 +126,10 @@
     <a href="./day_3.html" class="normal-link">Day 3</a><br><small><small>25.1.2025</small></small><br><br>
     <a href="./day_4.html" class="normal-link">Day 4</a><br><small><small>26.1.2025</small></small></p>
 
-    <p5> <small><small>about</small> </small> <br> <a href="./about.html" class="normal-link"> The Fest</a> <br><br>
+    <p3> <small><small>about</small> </small> <br> <a href="./about.html" class="normal-link"> The Fest</a> <br><br>
     <small><small>about</small> </small> <br> <a href="https://tessellate.cmi.ac.in/stems/" target="_blank" class="normal-link">STEMS</a><br><br>
     <small><small>about</small> </small> <br> <a href="https://www.cmi.ac.in" target="_blank" class="normal-link">CMI</a> <br><br>
-    <a href="./contact.html" class="normal-link">contact</a><br><small><small>us</small> </small> </p5>
+    <a href="./contact.html" class="normal-link">contact</a><br><small><small>us</small> </small> </p3>
   </div>
 
 </body>
