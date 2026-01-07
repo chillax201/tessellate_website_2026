@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      color: #ffffff;
+      background-color: black;
+      height: 200vh; /* Make the body taller than the viewport to enable scrolling */
+
+      /* Fixed background image that doesn't scroll */
+      background-image: url('background2.png'); /* Specify the path to your PNG */
+      background-size: cover; /* Ensure the image covers the entire body */
+      background-position: center; /* Center the image */
+      background-attachment: fixed; /* Make the background fixed (not scrolling) */
+      background-repeat: no-repeat; /* Prevent image repetition */
+    }
+    /* Style for links */
+    a.normal-link {
+      color: inherit;           /* Inherit the color from the parent element */
+      text-decoration: none;    /* Remove the underline */
+    }
+
+    /* Fixed position text (tesselate) */
+    p2 {
+      font-size: 4vh; /* Font size */
+      color: #dddddd; /* Text color */
+      -webkit-text-stroke: 0.12vh #444444; /* Black border around the text */
+      text-align: center;
+      position: fixed; /* Fixed position for the text */
+      top: 50%; /* Vertically center the text */
+      left: 50%; /* Horizontally center the text */
+      transform: translate(-50%, -50%); /* Offset the element to truly center it */
+      z-index: 100; /* Make sure the text stays above the rest of the content */
+    }
+
+    /* Scrollable content */
+    p {
+      color: #dddddd; /* Text color */
+      position: fixed;
+      z-index: 200; /* Ensure that content is behind the fixed text */
+      font-size: 1.75vh;
+      text-align: center;
+      top: 32.5%;
+      left: 50%;
+      text-align: center;
+
+      width: 25vw;      /* Full height of screen */
+      transform: translate(-50%, -50%); /* Offset the element to truly center it */
+
+      color: white;
+      z-index: 150; /* must be above the background but below foreground if needed */
+    }
+    p5 {
+      color: #dddddd; /* Text color */
+      position: fixed;
+      z-index: 200; /* Ensure that content is behind the fixed text */
+      font-size: 1.75vh;
+      text-align: center;
+      top: 65%;
+      left: 50%;
+      text-align: center;
+
+      width: 25vw;      /* Full height of screen */
+      transform: translate(-50%, -50%); /* Offset the element to truly center it */
+
+      color: white;
+      z-index: 150; /* must be above the background but below foreground if needed */
+    }
+
+    p3 {
+      position: relative;
+      z-index: 1; /* Ensure that content is behind the fixed text */
+      padding-top: 7.7vh; /* Adds some space to avoid overlapping with fixed text */
+      font-size: 1.4vh;
+      text-align: center;
+    }
+     .foreground-image {
+      position: fixed; /* Fix the image in place relative to the viewport */
+      top: 0;           /* Position the image at the top of the viewport */
+      left: 0;          /* Position the image at the left of the viewport */
+      z-index: 99;    /* Ensure the image stays above all other elements */
+      width: 100vw;     /* Set the width to 100% of the viewport width */
+      height: 100vh;    /* Set the height to 100% of the viewport height */
+      object-fit: cover; /* Ensure the image covers the whole area without stretching */
+    }
+
+    /* LEFT FIXED SIDEBAR */
+    .left-sidebar {
+      position: fixed;
+      top: 18%;
+      left: 2%;
+      text-align: center;
+
+      width: 25vw;     /* Left 25% of screen */
+      height: 100vh;   /* Full height of screen */
+
+      color: white;
+
+      overflow-y: auto; /* If text is long, scroll inside the sidebar */
+      z-index: 150; /* must be above the background but below foreground if needed */
+    }
+
+
+    /* Scrollable content */
+    .content {
+      font-size: 18px;
+      text-align: center;
+      padding-top: 100px; /* Adds some space to avoid overlapping with the fixed image */
+    }
+    .full-screen {
+      width: 100vw;    /* Full width of the viewport */
+      height: 28vh;   /* Full height of the viewport */
+    }
+  </style>
+  <title>CMI Tessellate 2026</title>
+  <link rel="icon" href="logo.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Fixed text that stays in place -->
+  <img class="foreground-image" src="./foreground-image2.png" alt="Foreground Image">
+  <p2>TESSELLATE</p2>
+
+  <!-- Scrollable content -->
+  <div >
+
+    <p><a href="./day_1.html" class="normal-link">Day 1 </a><br><small><small>23.1.2025</small> </small> <br><br>
+    <a href="./day_2.html" class="normal-link">Day 2</a><br><small><small>24.1.2025</small> </small><br><br>
+    <a href="./day_3.html" class="normal-link">Day 3</a><br><small><small>25.1.2025</small></small><br><br>
+    <a href="./day_4.html" class="normal-link">Day 4</a><br><small><small>26.1.2025</small></small></p>
+
+    <p5> <small><small>about</small> </small> <br> The Fest <br><br><small><small>about</small> </small> <br> <a href="https://tessellate.cmi.ac.in/stems/" target="_blank" class="normal-link">STEMS</a><br><br><small><small>about</small> </small> <br> <a href="https://www.cmi.ac.in" target="_blank" class="normal-link">CMI</a> <br><br>contact<br><small><small>us</small> </small> </p5>
+  </div>
+
+</body>
+</html>
