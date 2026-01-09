@@ -38,14 +38,21 @@
       width: 25vw;      /* Full height of screen */
       transform: translate(-50%, -50%); /* Offset the element to truly center it */
 
-      color: white;
       z-index: 150; /* must be above the background but below foreground if needed */
     }
 
     p2 {
       font-size: 4dvh; /* Font size */
       color: #dddddd; /* Text color */
-      -webkit-text-stroke: 0.12dvh #444444; /* Black border around the text */
+      text-shadow:
+          1.5px 0 0 #444444,
+         -1.5px 0 0 #444444,
+          0 1.5px 0 #444444,
+          0 -1.5px 0 #444444,
+          1.5px 1.5px 0 #444444,
+         -1.5px -1.5px 0 #444444,
+          1.5px -1.5px 0 #444444,
+         -1.5px 1.5px 0 #444444;
       text-align: center;
       position: fixed; /* Fixed position for the text */
       top: 50%; /* Vertically center the text */
@@ -68,7 +75,6 @@
       width: 25vw;      /* Full height of screen */
       transform: translate(-50%, -50%); /* Offset the element to truly center it */
 
-      color: white;
       z-index: 150; /* must be above the background but below foreground if needed */
     }
 
