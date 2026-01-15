@@ -13,6 +13,7 @@
 
       background-image: url("background_main.png");
       background-size: auto 100%;   /* height = 100% */
+      background-attachment: fixed;   /* ← Add this line */
       background-position: center;
       background-repeat: no-repeat
     }
@@ -22,10 +23,11 @@
     }
     /* Fixed position text (tesselate) */
 
-
     /* Scrollable content */
     p {
-      position: fixed;
+      padding-top: 35dvh;
+      padding-bottom: 26dvh;
+      position: relative;
       color: #dddddd; /* Text color */
       z-index: 1; /* Ensure that content is behind the fixed text */
       font-size: 1.8dvh;
@@ -50,25 +52,28 @@
          -1.5px 1.5px 0 #444444;
       text-align: center;
       position: fixed; /* Fixed position for the text */
-      top: 30%; /* Vertically center the text */
+      top: 27.5%; /* Vertically center the text */
       left: 50%; /* Horizontally center the text */
       transform: translate(-50%, -50%); /* Offset the element to truly center it */
       z-index: 100; /* Make sure the text stays above the rest of the content */
     }
 
     p3 {
-      position: relative;
-      z-index: 1; /* Ensure that content is behind the fixed text */
-      padding-top: 7.7dvh; /* Adds some space to avoid overlapping with fixed text */
-      font-size: 1.4dvh;
+      position: fixed;
+      z-index: 101; /* Ensure that content is behind the fixed text */
+      top: 78%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2dvh;
       text-align: center;
     }
      .foreground-image {
       position: fixed; /* Fix the image in place relative to the viewport */
-      top: 33%;           /* Position the image at the top of the viewport */
-      left: 75%;          /* Position the image at the left of the viewport */
+      top: 50%;           /* Position the image at the top of the viewport */
+      left: 50%;          /* Position the image at the left of the viewport */
+      transform: translate(-50%, -50%); /* Offset the element to truly center it */
       z-index: 99;    /* Ensure the image stays above all other elements */
-      width: 15vw;   /* Ensure the image covers the whole area without stretching */
+      height: 100vh;   /* Ensure the image covers the whole area without stretching */
     }
 
 
@@ -80,28 +85,31 @@
     }
     .full-screen {
       width: 100vw;    /* Full width of the viewport */
-      height: 100dvh;   /* Full height of the viewport */
+      height: 28dvh;   /* Full height of the viewport */
     }
   </style>
-  <title>Day 3 at Tessellate '26</title>
+  <title>Day 1 at Tessellate '26</title>
   <link rel="icon" href="logo.ico" type="image/x-icon">
 </head>
 <body>
-  <p2>TESSELLATE<br><b><small><small>25.1.2025</small></small></p2>
+   <img src="foreground_main.png" alt="" class="foreground-image">
+
+  <p2>TESSELLATE<br><b><small><small>23.1.2025</small></small></p2>
 <!--  <img class="foreground-image" src="./placeholder1.jpg" alt="Foreground Image">-->
 
   <!-- Scrollable content -->
-  <div class="full-screen">
-  </div>
-  <div >
-    <p>Tug of War<br><small><small>9:00 - 14:00</small> </small> <br><br>
-    DJ Night<br><small><small>19:00 - 24:00</small> </small><br><br>
-    <br><br>
-    <small><small>and more events and info to come</small></small><br><br>
-    <small><small><b><a href="./home.html"  class="normal-link">back</a></b></small></small></p></b>
-  </div>
+    
+    <p>
+    <small>scroll 'n' click</small> <br><br>
+    <a href="./event_301.html"  class="normal-link">Clash Royale</a><br><small><small>00:00 - 1:15  only CMI</small> </small> <br><br>
+    <a href="./event_302.html"  class="normal-link">GeoGuesser</a><br><small><small>00:00 - 1:15  only CMI</small> </small><br><br>
+    <a href="./event_303.html"  class="normal-link">Murder Mystery Night</a><br><small><small>1:30 - 4:00  only CMI</small></small><br><br>
+    <a href="./event_304.html"  class="normal-link">Tug of War II</a><br><small><small>9:00 - 14:00  only CMI</small></small><br><br>
+    <a href="./event_305.html"  class="normal-link">Monologue Competition</a><br><small><small> 14:00 - 15:00  open to all</small></small><br><br>
+    <a href="./event_306.html"  class="normal-link">Integration Bee I</a><br><small><small> 15:00 - 17:00  open to all</small></small><br><br>
+    <a href="./event_307.html"  class="normal-link">DJ Night </a><br><small><small> 19:00 - 24:00  only CMI</small></small><br><br>
+    <small><small>and more events and info to come</small></small><br><br></p>
+    <p3><small><small><b><a href="./home.html"  class="normal-link">back</a></b></small></small></p3></b>
 
-  <div class="full-screen">
-  </div>
 </body>
 </html>
